@@ -1,0 +1,4 @@
+- message: Default value is useless because the property is not optional.
+  line: 4
+  column: 16
+  suggestions: null

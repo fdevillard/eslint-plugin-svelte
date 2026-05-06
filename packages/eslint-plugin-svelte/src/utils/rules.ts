@@ -3,6 +3,7 @@
 // in order to update its content execute "pnpm run update"
 import type { RuleModule } from '../types.js';
 import typescriptEslintNoUnnecessaryCondition from '../rules/@typescript-eslint/no-unnecessary-condition.js';
+import typescriptEslintNoUselessDefaultAssignment from '../rules/@typescript-eslint/no-useless-default-assignment.js';
 import blockLang from '../rules/block-lang.js';
 import buttonHasType from '../rules/button-has-type.js';
 import commentDirective from '../rules/comment-directive.js';
@@ -85,6 +86,7 @@ import validStyleParse from '../rules/valid-style-parse.js';
 
 export const rules = [
 	typescriptEslintNoUnnecessaryCondition,
+	typescriptEslintNoUselessDefaultAssignment,
 	blockLang,
 	buttonHasType,
 	commentDirective,
