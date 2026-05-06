@@ -21,6 +21,11 @@ export interface RuleOptions {
    */
   'svelte/@typescript-eslint/no-unnecessary-condition'?: Linter.RuleEntry<SvelteTypescriptEslintNoUnnecessaryCondition>
   /**
+   * disallow default values that will never be used
+   * @see https://sveltejs.github.io/eslint-plugin-svelte/rules/@typescript-eslint/no-useless-default-assignment/
+   */
+  'svelte/@typescript-eslint/no-useless-default-assignment'?: Linter.RuleEntry<SvelteTypescriptEslintNoUselessDefaultAssignment>
+  /**
    * disallows the use of languages other than those specified in the configuration for the lang attribute of `<script>` and `<style>` blocks.
    * @see https://sveltejs.github.io/eslint-plugin-svelte/rules/block-lang/
    */
@@ -425,6 +430,11 @@ export interface RuleOptions {
 type SvelteTypescriptEslintNoUnnecessaryCondition = []|[{
   
   allowConstantLoopConditions?: boolean
+  
+  allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean
+}]
+// ----- svelte/@typescript-eslint/no-useless-default-assignment -----
+type SvelteTypescriptEslintNoUselessDefaultAssignment = []|[{
   
   allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing?: boolean
 }]
